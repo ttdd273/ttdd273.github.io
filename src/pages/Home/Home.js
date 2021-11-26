@@ -1,5 +1,4 @@
 import React from "react";
-import portfolio from './../../assets/img/portfolio.jpg'
 import { Link } from 'react-router-dom';
 
 class Home extends React.Component {
@@ -9,28 +8,44 @@ class Home extends React.Component {
                 {/* Introduction */}
                 {/* classes for styling, ids for anchoring */}
                 <section className="intro" id="home">
-                    <h1 className="section__title section__title--intro">
+                    <h1 className="section__titleBegin section__title--introBegin">
                         Hi, I am <strong>Tony Duan</strong>
                     </h1>
-                    <p className="section__subtitle section__subtitle--intro">Computer Science</p>
-                    <img src="somehwere." alt="" className="intro__img"/>
+                    {/* <h2 className="section__subtitleBegin section__subtitle--introBegin">Computer Science</h2> */}
+                    {/* <p className="section__subtitleBegin section__subtitle--introBegin">Computer Science</p> */}
+                    {/* <img src="somehwere." alt="" className="profile__img"/> */}
                 </section>
 
-                {/* My Services */}
                 <section className="my-services" id="services">
-                    <h2 className="section__title section__title--services">What I Do</h2>
+                    <h2 className="section__title section__title--services">Resume Information</h2>
                     <div className="services">
                         <div className="service">
-                            <h3>Design Development</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+                            <h3>Related Coursework</h3>
+                            <ul>
+                                <li>Data Structures and OOP</li>
+                                <li>Intro Computing Using Python</li>
+                                <li>Discrete Structures</li>
+                                <li>Differential Equations</li>
+                                <li>Intro to ML</li>
+                                <li>Computer Organization</li>
+                                <li>Analysis of Algorithms</li>
+                                <li>Foundations of AI</li>
+                            </ul>
                         </div>
                         <div className="service">
-                            <h3>E-Commerce</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+                            <h3>Work Experience</h3>
+                            <ul>
+                                <li>Varsity Tutors Tutor</li>
+                                <li>Queens Library Volunteer</li>
+                                <li>Frontend Developer for Project Team</li>
+                            </ul>
                         </div>
                         <div className="service">
-                            <h3>WordPress</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+                            <h3>Education</h3>
+                            <ul>
+                                <li>Bachelor's Degree: Cornell University</li>
+                                <li>High School: The Bronx HS Of Science</li>
+                            </ul>
                         </div> 
                     </div>
 
@@ -40,10 +55,14 @@ class Home extends React.Component {
                 {/* About Me */}
                 <section className="about-me" id="about">
                     <h2 className="section__title section__title--about">Who I Am</h2>
-                    <p className="section__subtitle section__subtitle--about">im the coolest</p>
+                    <p className="section__subtitle section__subtitle--about">A Little About Myself</p>
 
                     <div className="about-me__body">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+                        <p>I am currently studying CS, and I hope to learn more about CS through a job,
+                             so that I can finally be stressed and be paid and not be stressed while paying money.
+                             Thank you for reading this, I hope you can consider hiring me, below are some projects
+                             I've learned from other people online as well as some school projects (thank you).
+                        </p>
                     </div>
                     <img src="img/person.jpg" alt="" className="about-me__img"/>
                 </section>
@@ -51,15 +70,17 @@ class Home extends React.Component {
                 {/* My Work */}
                 <section className="my-work" id="work">
                     <h2 className="section__title section__title--work">My Work</h2>
-                    <p className="section__subtitle section__subtitle--work">A Selection of ma work</p>
+                    <p className="section__subtitle section__subtitle--work">A Selection of School Projects and Online Tutorials</p>
                     <div className="portfolio">
                         {/* Portfolio item 1 */}
                         <Link to="/computer-vision" className="portfolio__item">
-                            <img src={portfolio} alt="" className="portfolio__img"/>
+                            {/* <h1 className="">Computer Vision</h1> */}
+                            <img src={this.props.image1} alt="" className="portfolio__img"/>
                         </Link>
                         {/* Portfolio item 2 */}
                         <Link to="/pong" className="portfolio__item">
-                            <img src={portfolio} alt="" className="portfolio__img"/>
+                            {/* <h1 className="">Pong</h1> */}
+                            <img src={this.props.image2} alt="" className="portfolio__img"/>
                         </Link>
                         
                     </div>
