@@ -12,7 +12,7 @@ class Home extends React.Component {
                     <h1 className="section__title section__title--intro">
                         Hi, I am <strong>Tony Duan</strong>
                     </h1>
-                    <p className="section__subtitle section__subtitle--intro">front end dev</p>
+                    <p className="section__subtitle section__subtitle--intro">Computer Science</p>
                     <img src="somehwere." alt="" className="intro__img"/>
                 </section>
 
@@ -55,8 +55,6 @@ class Home extends React.Component {
                     <div className="portfolio">
                         {/* Portfolio item 1 */}
                         <Link to="/computer-vision" className="portfolio__item">
-                        {/* <a href="portfolio-item.html" className="portfolio__item"> */}
-                            {/* <h1 className="portfolio__name" >First port</h1> */}
                             <img src={portfolio} alt="" className="portfolio__img"/>
                         </Link>
                         {/* Portfolio item 2 */}
