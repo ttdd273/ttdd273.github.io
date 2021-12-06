@@ -12,6 +12,8 @@ import {
 import Portfolio from './pages/Portfolio/Portfolio.js';
 import Handtracking from './assets/img/handtracking.jpg'
 import Pong from './assets/img/pong.jpg'
+import BillSplitter from './assets/img/billsplitter.png'
+import School from './assets/img/school.png'
 
 class App extends React.Component {
     render() {
@@ -20,7 +22,9 @@ class App extends React.Component {
                 <div className="App" ref={el => (this.div = el)}>
                     <Header />
                     <Routes>
-                        <Route path='/ttdd273w' element={<Home image1={Handtracking} image2={Pong} />} />
+                        <Route path='/ttdd273w' element={
+                            <Home image1={Handtracking} image2={Pong} image3={BillSplitter} image4={School}/>
+                        } />
                         <Route path='/computer-vision' element={
                             <Portfolio categoryName="Python" 
                                 projectName="Handtracking Project"
@@ -37,6 +41,24 @@ class App extends React.Component {
                                 subtitleName="Classic Pong Game"
                                 description="This is a very simple pong game made in python. Built using the pen module in python.
                                  Credits to: Christian Thompson"
+                            />} 
+                        />
+                        <Route path='/billsplitter' element={
+                            <Portfolio categoryName="Python Made" 
+                                projectName="Bill Splitter"
+                                imagePath={BillSplitter}
+                                subtitleName="Split Your Bill with Friends"
+                                description="This is a very simple web application that splits the bill depending on various inputs."
+                            />} 
+                        />
+                        <Route path='/schoolprojects' element={
+                            <Portfolio categoryName="School Projects" 
+                                projectName="Assignments and Interesting Implementations"
+                                imagePath={School}
+                                subtitleName="Python, Java, scikit-learn"
+                                description="The following are some projects I've implemented in school. Please contact me if you are
+                                interested in any of the following: Imager; Froggit; Turtle Drawer; What makes a good game?;
+                                BFS and DFS via Sewer Diver"
                             />} 
                         />
                     </Routes>

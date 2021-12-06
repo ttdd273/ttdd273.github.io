@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+import Myself from './../../assets/img/myself.jpg'
+
 
 class Home extends React.Component {
     render() {
@@ -64,7 +66,7 @@ class Home extends React.Component {
                              I've learned from other people online as well as some school projects (thank you).
                         </p>
                     </div>
-                    <img src="img/person.jpg" alt="" className="about-me__img"/>
+                    <img src={Myself} alt="" className="about-me__img"/>
                 </section>
 
                 {/* My Work */}
@@ -74,13 +76,17 @@ class Home extends React.Component {
                     <div className="portfolio">
                         {/* Portfolio item 1 */}
                         <Link to="/computer-vision" className="portfolio__item">
-                            {/* <h1 className="">Computer Vision</h1> */}
                             <img src={this.props.image1} alt="" className="portfolio__img"/>
                         </Link>
                         {/* Portfolio item 2 */}
                         <Link to="/pong" className="portfolio__item">
-                            {/* <h1 className="">Pong</h1> */}
                             <img src={this.props.image2} alt="" className="portfolio__img"/>
+                        </Link>
+                        <Link to="/billsplitter" className="portfolio__item">
+                            <img src={this.props.image3} alt="" className="portfolio__img"/>
+                        </Link>
+                        <Link to="/schoolprojects" className="portfolio__item">
+                            <img src={this.props.image4} alt="" className="portfolio__img"/>
                         </Link>
                         
                     </div>

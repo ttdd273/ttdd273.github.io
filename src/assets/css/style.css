@@ -14,8 +14,8 @@
     --fw-bold: 900;
 
     --clr-light: #fff;
-    --clr-dark: #303030;
-    --clr-accent: #16e0bd;
+    --clr-dark: #383301;
+    --clr-accent: #e0c216;
 
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -56,7 +56,6 @@ section {
 
 img {
     display: block;
-    max-width: 100
 }
 
 strong { font-weight: var(--fw-bold) }
@@ -346,6 +345,7 @@ a {
 
 .about-me__img {
     box-shadow: var(--bs);
+    max-width: 125%;
 }
 
 @media (min-width: 600px) {
@@ -403,13 +403,15 @@ a {
 } */
 
 .portfolio__item {
-    background: var(--clr-accent);
+    background: var(--clr-accent); 
     overflow: hidden;
+
 }
 
 .portfolio__img {
     width: 100%;
-    object-fit: fill;
+    height: 100%;
+    object-fit: cover;
     object-position: center;
     transition:
         transform 750ms cubic-bezier(.5, 0, .5, 1),
