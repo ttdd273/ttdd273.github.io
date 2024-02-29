@@ -1,3 +1,3 @@
 # Portfolio Website
 
-This website was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and credits to Kevin Powell.
+Dumping ground for bunch of projects and experiences, credits to Kevin Powell for the initial website idea.
