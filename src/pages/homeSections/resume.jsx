@@ -2,12 +2,12 @@ import React from "react";
 
 const ResumeSection = () => {
   return (
-    <section className="my-services" id="services">
-      <h2 className="section__title section__title--services">
+    <section className="my-resumes" id="resumes">
+      <h2 className="section__title section__title--resumes">
         Resume Information
       </h2>
-      <div className="services">
-        <div className="service">
+      <div className="resumes">
+        <div className="resume">
           <h3>Related Coursework</h3>
           <ul>
             <li>Data Structures and OOP</li>
@@ -20,7 +20,7 @@ const ResumeSection = () => {
             <li>Foundations of AI</li>
           </ul>
         </div>
-        <div className="service">
+        <div className="resume">
           <h3>Work Experience</h3>
           <ul>
             <li>Varsity Tutors Tutor</li>
@@ -28,7 +28,7 @@ const ResumeSection = () => {
             <li>Frontend Developer for Project Team</li>
           </ul>
         </div>
-        <div className="service">
+        <div className="resume">
           <h3>Education</h3>
           <ul>
             <li>Bachelor's Degree: Cornell University</li>
