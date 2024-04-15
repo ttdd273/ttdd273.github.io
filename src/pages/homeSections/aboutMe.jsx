@@ -1,5 +1,4 @@
 import React from "react";
-import Myself from "../../assets/img/myself.jpg";
 
 const AboutMeSection = () => {
   return (
@@ -17,7 +16,6 @@ const AboutMeSection = () => {
           experience.
         </p>
       </div>
-      <img src={Myself} alt="" className="about-me__img" />
     </section>
   );
 };

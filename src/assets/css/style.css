@@ -359,7 +359,7 @@ a {
   max-width: 125%;
 }
 
-@media (min-width: 600px) {
+/* @media (min-width: 600px) {
   .about-me {
     display: grid;
     grid-template-columns: 1fr 200px;
@@ -389,7 +389,7 @@ a {
     position: relative;
     z-index: 2;
   }
-}
+} */
 
 /* My Work */
 
