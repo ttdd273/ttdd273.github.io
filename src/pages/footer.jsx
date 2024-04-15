@@ -8,7 +8,7 @@ class Footer extends React.Component {
         <ul className="social-list">
           <li className="social-list__item">
             <a href="mailto:ttdd273w@gmail.com" className="social-list__link">
-              <i className="fa fa-github" aria-hidden="true"></i>
+              <i className="fa fa-envelope" aria-hidden="true"></i>
             </a>
           </li>
           <li className="social-list__item">
