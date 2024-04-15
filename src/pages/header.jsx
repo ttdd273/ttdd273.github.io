@@ -38,22 +38,22 @@ class Header extends React.Component {
           {/* double underscore for a subsection */}
           <ul className="nav__list">
             <li className="nav__item">
-              <a href="/ttdd273w" className="nav__link">
+              <a href="/" className="nav__link">
                 Home
               </a>
             </li>
             <li className="nav__item">
-              <a href="/ttdd273w/#resumes" className="nav__link">
+              <a href="/#resumes" className="nav__link">
                 Resume Information
               </a>
             </li>
             <li className="nav__item">
-              <a href="/ttdd273w/#about" className="nav__link">
+              <a href="/#about" className="nav__link">
                 About Me
               </a>
             </li>
             <li className="nav__item">
-              <a href="/ttdd273w/#work" className="nav__link">
+              <a href="/#work" className="nav__link">
                 My Work
               </a>
             </li>
