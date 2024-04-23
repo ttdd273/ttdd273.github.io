@@ -3,13 +3,9 @@ import "./../assets/css/style.css";
 
 class Header extends React.Component {
   openNavBar() {
-    const navToggle = document.querySelector(".nav-toggle");
+    document.body.classList.toggle("nav-open");
 
     const navLinks = document.querySelectorAll(".nav__link");
-
-    navToggle.addEventListener("click", () => {
-      document.body.classList.toggle("nav-open");
-    });
 
     navLinks.forEach((link) => {
       link.addEventListener("click", () => {
