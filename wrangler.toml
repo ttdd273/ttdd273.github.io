@@ -8,11 +8,11 @@ bucket = "./build"
 [env.production]
 name = "personal-website-prod"
 
-[[env.production.routes]]
+[[routes]]
 pattern = "ttdddan.com"
 custom_domain = true
 
-[[env.production.routes]]
+[[routes]]
 pattern = "www.ttdddan.com"
 custom_domain = true
 
