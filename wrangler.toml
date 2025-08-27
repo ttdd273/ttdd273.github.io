@@ -1,0 +1,12 @@
+name = "personal-website"
+main = "src/worker.js"
+compatibility_date = "2024-01-01"
+
+[site]
+bucket = "./build"
+
+[env.production]
+name = "personal-website-prod"
+
+[env.staging]
+name = "personal-website-staging"
