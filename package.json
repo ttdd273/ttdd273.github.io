@@ -19,7 +19,11 @@
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "worker:dev": "wrangler dev",
+    "worker:deploy": "wrangler deploy",
+    "worker:deploy:staging": "wrangler deploy --env staging",
+    "worker:deploy:prod": "wrangler deploy --env production"
   },
   "eslintConfig": {
     "extends": [
@@ -40,6 +44,8 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^3.2.3"
+    "gh-pages": "^3.2.3",
+    "wrangler": "^3.22.1",
+    "@cloudflare/kv-asset-handler": "^0.3.0"
   }
 }
