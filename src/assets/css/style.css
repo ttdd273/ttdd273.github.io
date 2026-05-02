@@ -1,5 +1,6 @@
 *,
-*::before *::after {
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -124,7 +125,7 @@ h3 {
 
 .section__titleBegin {
   background: var(--clr-accent);
-  font-family: var(-ff-secondary);
+  font-family: var(--ff-secondary);
   padding: 0.25em 1em;
   display: flex;
 }
@@ -132,7 +133,7 @@ h3 {
 .section__subtitle--intro,
 .section__subtitle--about {
   background: var(--clr-accent);
-  font-family: var(-ff-secondary);
+  font-family: var(--ff-secondary);
   padding: 0.25em 1em;
   margin-bottom: 1em;
 }
@@ -316,17 +317,17 @@ a {
   text-align: center;
 }
 
-.section__title-resumes {
+.section__title--resumes {
   color: var(--clr-accent);
   position: relative;
 }
 
-.section__title-resumes::after {
+.section__title--resumes::after {
   content: "";
   display: block;
   width: 3em;
   height: 1px;
-  margin: 0.5 em auto 1em;
+  margin: 0.5em auto 1em;
   background: var(--clr-light);
   opacity: 0.25;
 }

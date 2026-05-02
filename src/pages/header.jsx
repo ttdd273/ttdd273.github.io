@@ -4,14 +4,10 @@ import "./../assets/css/style.css";
 class Header extends React.Component {
   openNavBar() {
     document.body.classList.toggle("nav-open");
+  }
 
-    const navLinks = document.querySelectorAll(".nav__link");
-
-    navLinks.forEach((link) => {
-      link.addEventListener("click", () => {
-        document.body.classList.remove("nav-open");
-      });
-    });
+  closeNavBar() {
+    document.body.classList.remove("nav-open");
   }
 
   render() {
@@ -34,22 +30,22 @@ class Header extends React.Component {
           {/* double underscore for a subsection */}
           <ul className="nav__list">
             <li className="nav__item">
-              <a href="/" className="nav__link">
+              <a href="/" className="nav__link" onClick={this.closeNavBar}>
                 Home
               </a>
             </li>
             <li className="nav__item">
-              <a href="/#resumes" className="nav__link">
+              <a href="/#resumes" className="nav__link" onClick={this.closeNavBar}>
                 Resume Information
               </a>
             </li>
             <li className="nav__item">
-              <a href="/#about" className="nav__link">
+              <a href="/#about" className="nav__link" onClick={this.closeNavBar}>
                 About Me
               </a>
             </li>
             <li className="nav__item">
-              <a href="/#work" className="nav__link">
+              <a href="/#work" className="nav__link" onClick={this.closeNavBar}>
                 My Work
               </a>
             </li>
