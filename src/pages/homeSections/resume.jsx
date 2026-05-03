@@ -30,7 +30,6 @@ const ResumeSection = () => {
           <ul>
             <li>M.Eng in Computer Science, Cornell University</li>
             <li>B.S. in Computer Science, Cornell University</li>
-            <li>The Bronx High School of Science</li>
           </ul>
         </div>
       </div>

@@ -173,17 +173,18 @@ header {
   max-width: 100%;
 }
 
-.eyebrow {
-  color: var(--clr-muted);
-  font-weight: var(--fw-bold);
-  letter-spacing: 0.12em;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-}
-
 .section__title--intro {
   font-weight: var(--fw-reg);
   margin-bottom: 1.25rem;
+}
+
+.section__title--intro::after {
+  background: var(--clr-accent);
+  content: "";
+  display: block;
+  height: 3px;
+  margin-top: 1.25rem;
+  width: 2.5rem;
 }
 
 .section__title--intro strong {
@@ -213,6 +214,7 @@ header {
   background: linear-gradient(rgba(22, 27, 34, 0.86), rgba(22, 27, 34, 0.9)),
     url(../img/background.jpg) center / cover;
   color: var(--clr-light);
+  text-align: center;
 }
 
 .section__title--resumes,
@@ -250,8 +252,18 @@ header {
 }
 
 .resume ul {
+  list-style: none;
   margin: 0;
-  padding-left: 1.1rem;
+  padding: 0;
+}
+
+.resume li {
+  padding: 0.3rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.resume li:last-child {
+  border-bottom: none;
 }
 
 .about-me {
@@ -281,6 +293,7 @@ header {
 
 .my-work {
   background: #eef2f5;
+  border-top: 1px solid var(--clr-border);
   color: var(--clr-dark);
 }
 
@@ -356,11 +369,19 @@ header {
   font-weight: var(--fw-bold);
 }
 
+.portfolio-item__description {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  display: -webkit-box;
+  overflow: hidden;
+}
+
 
 .footer {
   background: var(--clr-dark);
   color: var(--clr-light);
   padding: 2rem 0;
+  text-align: center;
 }
 
 .social-list {

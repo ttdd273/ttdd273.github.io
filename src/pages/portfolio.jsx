@@ -16,7 +16,7 @@ const Portfolio = ({
       </div>
 
       <p className="portfolio-item__category">{categoryName}</p>
-      <p>{description}</p>
+      <p className="portfolio-item__description">{description}</p>
     </div>
   );
 };

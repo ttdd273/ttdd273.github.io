@@ -1,5 +1,33 @@
 # Changelog
 
+## 2026-05-03 (session 2)
+
+### Visual
+
+- Added accent bar to intro
+  - Short amber rule renders below the name via `::after`, giving the text-only hero a visual anchor.
+
+- Centered Resume section heading and CTA button
+  - Added `text-align: center` to `.my-resumes`; heading and "My Work" button now align with the card grid.
+
+- Added section separator between Who I Am and My Work
+  - `border-top: 1px solid var(--clr-border)` on `.my-work` creates a clean break between the two adjacent light-background sections.
+
+- Uniform portfolio card heights
+  - Added `line-clamp: 4` to description paragraphs so all cards truncate consistently and the grid rows stay even.
+
+### Content
+
+- Removed "SOFTWARE ENGINEER" eyebrow from intro
+- Removed "A Little About Myself" subtitle from Who I Am section
+- Updated Who I Am body text — removed M.Eng student reference, kept employer-neutral
+- Removed "The Bronx High School of Science" from Education list
+- Updated intro subtitle from Cornell student description to "Building practical software."
+
+### Refactors
+
+- Removed dead `.eyebrow` CSS block (element no longer rendered)
+
 ## 2026-05-03
 
 ### Refactors
