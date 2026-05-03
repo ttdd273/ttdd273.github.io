@@ -1,5 +1,46 @@
 # Changelog
 
+## 2026-05-03
+
+### Refactors
+
+- Replaced hamburger nav with always-visible inline nav
+  - Removed all hamburger/overlay CSS (~80 lines) and the `nav-open` body class.
+  - Removed state and toggle logic from `Header`; component is now a pure render function.
+  - Collapsed the `.logo` div + `#nav__title` h2 wrapper into a single `<a class="site-logo">`.
+
+- Removed unused images
+  - Deleted `billsplitter.png`, `handtracking.jpg`, `myself.jpg`, `person.jpg`, `pong.jpg`, `school.png`.
+  - Only `background.jpg` remains (used in the Resume section CSS).
+
+- Removed unused dependencies
+  - Uninstalled `@testing-library/jest-dom`, `@testing-library/react`, `@testing-library/user-event` — no tests exist.
+  - Uninstalled `gh-pages` — site deploys via Cloudflare Workers, not GitHub Pages.
+  - Removed leftover `predeploy`, `deploy` scripts and `homepage` field from `package.json`.
+  - Removed `--ff-secondary` CSS variable — defined but never referenced.
+
+- Simplified intro section
+  - Removed profile image from `intro.jsx`; section is now a clean text-only hero.
+  - Removed two-column grid layout and `.intro__img` styles from `site.css`.
+
+### Bug Fixes
+
+- Fixed Google Fonts loading wrong weights
+  - Was loading `wght@300` but CSS uses `400` (regular) and `700` (bold).
+  - Updated to `wght@400;700`.
+
+- Fixed intro section excessive whitespace
+  - `min-height: calc(100vh - 76px)` forced the intro to fill the viewport even when content was short.
+  - Removed `min-height` so section height is determined by content.
+
+- Fixed About Me section alignment
+  - Missing `margin: 0 auto` caused the content block to sit flush left on wide screens.
+
+- Fixed resume section max-width inconsistency
+  - `.resumes` was `1100px` while intro and portfolio used `1120px`; aligned to `1120px`.
+
+- Updated `.gitignore` to exclude `.playwright-mcp/`
+
 ## 2026-05-02 (session 2)
 
 ### Refactors

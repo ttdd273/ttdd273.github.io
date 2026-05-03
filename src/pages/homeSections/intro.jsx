@@ -1,5 +1,4 @@
 import React from "react";
-import profileImage from "../../assets/img/myself.jpg";
 
 const IntroSection = () => {
   return (
@@ -21,7 +20,6 @@ const IntroSection = () => {
           </a>
         </div>
       </div>
-      <img src={profileImage} alt="Tony Duan" className="intro__img" />
     </section>
   );
 };
