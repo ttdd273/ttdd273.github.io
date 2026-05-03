@@ -10,29 +10,27 @@ const ResumeSection = () => {
         <div className="resume">
           <h3>Related Coursework</h3>
           <ul>
-            <li>Data Structures and OOP</li>
-            <li>Intro Computing Using Python</li>
-            <li>Discrete Structures</li>
-            <li>Differential Equations</li>
-            <li>Intro to ML</li>
-            <li>Computer Organization</li>
             <li>Analysis of Algorithms</li>
-            <li>Foundations of AI</li>
+            <li>Foundations of Artificial Intelligence</li>
+            <li>Machine Learning</li>
+            <li>Computer Organization</li>
+            <li>Data Structures and Object-Oriented Programming</li>
           </ul>
         </div>
         <div className="resume">
           <h3>Work Experience</h3>
           <ul>
-            <li>Varsity Tutors Tutor</li>
-            <li>Queens Library Volunteer</li>
-            <li>Frontend Developer for Project Team</li>
+            <li>Software Engineering Intern, Yext</li>
+            <li>Software Engineering Intern, Visa</li>
+            <li>Frontend Developer for Cornell project team</li>
           </ul>
         </div>
         <div className="resume">
           <h3>Education</h3>
           <ul>
-            <li>Bachelor's Degree: Cornell University</li>
-            <li>High School: The Bronx HS Of Science</li>
+            <li>M.Eng in Computer Science, Cornell University</li>
+            <li>B.S. in Computer Science, Cornell University</li>
+            <li>The Bronx High School of Science</li>
           </ul>
         </div>
       </div>

@@ -9,15 +9,14 @@ const Portfolio = ({
   return (
     <div className="portfolio-item">
       <div className="portfolio-item--header">
-        <h3>
-          <strong>{projectName}</strong>
-        </h3>
+        <h3>{projectName}</h3>
         {rightDescriptor && (
-          <p className="right-descriptor">{rightDescriptor}</p>
+          <span className="right-descriptor">{rightDescriptor}</span>
         )}
       </div>
 
-      {description}
+      <p className="portfolio-item__category">{categoryName}</p>
+      <p>{description}</p>
     </div>
   );
 };

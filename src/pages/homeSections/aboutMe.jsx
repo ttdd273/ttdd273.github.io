@@ -10,10 +10,10 @@ const AboutMeSection = () => {
 
       <div className="about-me__body">
         <p>
-          I'm currently a CS M.Eng student @ Cornell. I studied CS as an
-          undergrad, and I'm hoping to learn more about a variety of different
-          things by experimenting, through classes, and through industry
-          experience.
+          I'm a Cornell CS M.Eng student with experience across full-stack
+          product work, infrastructure, accessibility, and applied machine
+          learning. I like projects that turn ambiguous problems into simple,
+          useful tools.
         </p>
       </div>
     </section>
