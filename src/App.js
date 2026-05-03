@@ -1,20 +1,25 @@
 import React from "react";
-import "./App.css";
 import "./assets/css/site.css";
 import Header from "./pages/header.jsx";
-import Home from "./pages/home.jsx";
 import Footer from "./pages/footer.jsx";
+import {
+  IntroSection,
+  ResumeSection,
+  AboutMeSection,
+  MyWorkSection,
+} from "./pages/homeSections";
 
-class App extends React.Component {
-  render() {
-    return (
-      <div className="App" ref={(el) => (this.div = el)}>
-        <Header />
-        <Home />
-        <Footer />
-      </div>
-    );
-  }
+function App() {
+  return (
+    <div className="App">
+      <Header />
+      <IntroSection />
+      <ResumeSection />
+      <AboutMeSection />
+      <MyWorkSection />
+      <Footer />
+    </div>
+  );
 }
 
 export default App;

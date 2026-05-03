@@ -1,5 +1,32 @@
 # Changelog
 
+## 2026-05-02 (session 2)
+
+### Refactors
+
+- Consolidated CSS into a single file
+  - Removed `App.css`, `index.css`, and the orphaned `style.css`.
+  - Merged font-smoothing rules and `.App { min-height: 100vh }` into `site.css`.
+  - All styles now live in `src/assets/css/site.css`.
+
+- Removed dead CSS from `site.css`
+  - Deleted the original design layer (lines 1–529) that was fully overridden by the redesign layer beneath it.
+  - Removed unused selectors: `.section__titleBegin`, `.section__title--introBegin`, `.about-me__img`, `.portfolio__img`, `.portfolio__item:focus`, `.footer__link`, `.portfolio-item-individual`, `.portfolio-item-indivdual p`, and duplicated `.portfolio-item--header`.
+  - Removed commented-out CSS blocks (`about-me` grid layout, `.portfolio__name`).
+
+- Converted class components to functional
+  - `App`, `Header`, `Home`, and `Footer` were class components; all converted to functions.
+  - `Header` now uses `useState` instead of `this.state`.
+  - `Home` was a passthrough wrapper with no logic; deleted it and inlined its sections directly into `App`.
+
+### Bug Fixes
+
+- Removed dead `ref` in `App`
+  - `ref={(el) => (this.div = el)}` was set on the root div but never read.
+
+- Removed dead `reportWebVitals` boilerplate from `index.js`
+  - Commented-out import and call were leftover CRA scaffolding.
+
 ## 2026-05-02
 
 ### Bug Fixes

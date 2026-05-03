@@ -1,70 +1,62 @@
-import React from "react";
+import React, { useState } from "react";
 
-class Header extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { isOpen: false };
-  }
+function Header() {
+  const [isOpen, setIsOpen] = useState(false);
 
-  openNavBar = () => {
-    this.setState(
-      (state) => ({ isOpen: !state.isOpen }),
-      () => {
-        document.body.classList.toggle("nav-open", this.state.isOpen);
-      }
-    );
+  const toggleNav = () => {
+    const next = !isOpen;
+    setIsOpen(next);
+    document.body.classList.toggle("nav-open", next);
   };
 
-  closeNavBar = () => {
+  const closeNav = () => {
+    setIsOpen(false);
     document.body.classList.remove("nav-open");
-    this.setState({ isOpen: false });
   };
 
-  render() {
-    return (
-      <header>
-        <div className="logo">
-          <h2 id="nav__title">
-            <a href="#home">TTDD</a>
-          </h2>
-        </div>
-        <button
-          className="nav-toggle"
-          aria-label="Toggle navigation"
-          aria-expanded={this.state.isOpen}
-          aria-controls="site-navigation"
-          onClick={this.openNavBar}
-          type="button"
-        >
-          <span className="hamburger"></span>
-        </button>
-        <nav className="nav" id="site-navigation">
-          <ul className="nav__list">
-            <li className="nav__item">
-              <a href="#home" className="nav__link" onClick={this.closeNavBar}>
-                Home
-              </a>
-            </li>
-            <li className="nav__item">
-              <a href="#resumes" className="nav__link" onClick={this.closeNavBar}>
-                Resume Information
-              </a>
-            </li>
-            <li className="nav__item">
-              <a href="#about" className="nav__link" onClick={this.closeNavBar}>
-                About Me
-              </a>
-            </li>
-            <li className="nav__item">
-              <a href="#work" className="nav__link" onClick={this.closeNavBar}>
-                My Work
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-    );
-  }
+  return (
+    <header>
+      <div className="logo">
+        <h2 id="nav__title">
+          <a href="#home">TTDD</a>
+        </h2>
+      </div>
+      <button
+        className="nav-toggle"
+        aria-label="Toggle navigation"
+        aria-expanded={isOpen}
+        aria-controls="site-navigation"
+        onClick={toggleNav}
+        type="button"
+      >
+        <span className="hamburger"></span>
+      </button>
+      <nav className="nav" id="site-navigation">
+        <ul className="nav__list">
+          <li className="nav__item">
+            <a href="#home" className="nav__link" onClick={closeNav}>
+              Home
+            </a>
+          </li>
+          <li className="nav__item">
+            <a href="#resumes" className="nav__link" onClick={closeNav}>
+              Resume Information
+            </a>
+          </li>
+          <li className="nav__item">
+            <a href="#about" className="nav__link" onClick={closeNav}>
+              About Me
+            </a>
+          </li>
+          <li className="nav__item">
+            <a href="#work" className="nav__link" onClick={closeNav}>
+              My Work
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  );
 }
 
 export default Header;
